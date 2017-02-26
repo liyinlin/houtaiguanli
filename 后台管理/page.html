@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	.done{
+		width: 275px;
+		height:80px;
+		position: absolute;
+		top: 120px;
+		left: 720px;
+		/*display: none;*/
+		opacity: 0;
+		cursor: pointer;
+		background: #ccc;
+		transform: translateZ(-150px) skewX(-61deg) skewY(14deg);
+		-webkit-transition-property:all;
+		-webkit-transition-duration:0.5;
+		-webkit-transition-delay:0;
+		-webkit-transition-timing-function:ease;
+	}
+	#show{
+		width: 200px;
+		background: #fff;
+		font-size: 20px;
+		position: absolute;
+		top: 20px;
+		left:20px;
+		display: none;
+	}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=guUOuSHuGppDzYKvOIa5Yp7R"></script>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+	<div id="allmap"></div>
+	<div class="animation done" id="done">
+		
+	</div>
+	<div id="show">
+		辖区信息  负责该区域紧急联系人 片警 巡逻人员的电话  
+	</div>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 15);  // 初始化地图,设置中心点坐标和地图级别
+	map.disableDragging();   
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+<script type="text/javascript">
+	$('.done').eq(0).mouseover(function (e){
+		$(this).css('opacity',0.7);
+		$('#show').show()
+		
+	})
+	$('.done').eq(0).mouseout(function (){
+		$(this).css('opacity',0);
+		$('#show').hide();
+	})
+//	var ds=document.getElementById("done");
+//	var sd=document.getElementById("show");
+//	ds.onmouseover=function (){
+//		ds.style.opacity=0.5;
+//		sd.style.display='block';
+//	}
+//	ds.onmouseout=function (){
+//		ds.style.opacity=0;
+//		sd.style.display='none';
+//	}
+</script>
+</body>
+</html>

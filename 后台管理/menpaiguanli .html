@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>
+		<style type="text/css">
+			.table {
+				font-size: 18px;
+			
+			}
+			.table .bg-primary{
+				background: #6fb3e0;
+				color: #fff;
+			}
+			.table .text-info{
+				font-size: 34px;
+			}
+			.table #th{
+				padding:20px 0;
+			}
+			#td button {
+				margin-left: 30px;
+			}
+		</style>
+		<script src="lib/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--<div id="head">
+			<div class="guanli">
+				<h1>XXX管理系统</h1>
+			</div>
+			<ul id="xixi">
+				<li>汉语</li>
+				<li>维语</li>
+				<li>用户: <span>刘小东</span></li>
+				<li>当前机构: <span>XXX派出所</span></li>
+				<li>角色: <span>警察</span></li>
+				<li>注销</li>
+			</ul>-->
+		</div>
+		<div>
+			<table class="table table-bordered">
+				<caption class="h3 text-info">用户信息表</caption>
+	            <tr class="row text-danger">
+	                <th id="th" class="col-md-1 bg-primary text-center">门牌号</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">地址</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">地理坐标</th>
+	                <th id="th" class="col-md-1 bg-primary text-center">状态</th>
+	                <th id="th" class="col-md-1 bg-primary text-center">经办人</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">操作</th>
+	            </tr>
+	            <tr class="row text-danger table-hover">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	            <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm">激活</button>
+               		 </td>
+	            </tr>
+	             <tr class="row text-danger">
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="th" class="col-md-1 text-center"></td>
+	                <td id="td" class="text-center">
+                    	<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" @click='newIndex=index'>编辑</button>
+                    	<button class="btn btn-primary btn-sm" >激活</button>
+               		 </td>
+	            </tr>
+			</table>
+			<p style="font-size: 20px;padding-right:30px;float: right;">共<span style="color: #54aad9;">9</span>条记录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/5页</p>
+		</div>
+		    <!--模态框 弹出框-->
+        <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+			            <table class="table table-bordered">
+				            <tr class="row text-danger">
+				                <th id="th" class="col-md-2 bg-primary text-center">门牌号</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">地址</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">地理坐标</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">状态</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">经办人</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">备注</th>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td id="th" class="col-md-2 text-center"></td>
+				                <td id="th" class="col-md-2 text-center"></td>
+				                <td id="th" class="col-md-2 text-center"></td>
+				                <td id="th" class="col-md-2 text-center"></td>
+				              	<td id="th" class="col-md-2 text-center"></td>
+				              	<td id="th" class="col-md-2 text-center"></td>
+				            </tr>
+				        </table>
+                    </div>
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" @click='del(newIndex)'>确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

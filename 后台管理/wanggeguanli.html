@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.jumbotron,img{
+				width: 100%;
+				height: 100%;
+			}
+			
+			#ds{
+				padding: 0;
+				margin: 0;
+			}
+			#pos{
+				/*width: 40%;*/
+				position: absolute;
+				top: 30px;
+				left: 30px;
+			}
+			#ipus{
+				width: 20%;
+				height: 43px;
+			}
+			#but,.bus{
+				height: 43px;
+			}
+			.bus{
+				float: left;
+			}
+			#buss{
+				width: 60px;
+				background:#1e5e9c url(images/sosuo.png) center no-repeat;
+			}
+			#suos{
+				width: 80%;
+			}
+			#tab,#tab1,#tab2,#tab3,#tab0,#tab4{
+				width: 22.1%;
+				background: #fff;
+				margin-top: 10px;
+				float: left;
+				margin-left: 30px;
+			}
+			#tab{
+				margin-left:0;
+			}
+			.table .bg-primary {
+			    background: #6fb3e0;
+			    color: #fff;
+			}
+			th{
+				font-weight: normal;
+			}
+			#tab td,#tab1 td,#tab2 td,#tab3 td,#tab0 td,#tab4 td{
+			    /* padding: 20px 0; */
+			    height: 40px !important;
+			}
+			#poss{
+				cursor: pointer;
+				position: absolute;
+				 width: 210px;
+				 height: 300px;
+				 background: #556aba;
+				 opacity: 0;
+				 left: 940px;
+				 top: 270px;
+				 transform: rotateX(30deg) rotateY(12deg) rotateZ(17deg) translateY(98px) skewX(-41deg);
+			}
+			#tab td,#tab1 td,#tab2 td,#tab3 td,#tab0 td,#tab4 td,#ipus{
+				font-size: 18px;
+			}
+			.col{
+				background:#6fb3e0;
+			}
+			.modal-dialog{
+				width: 80%;
+			}
+			#tiaoli{
+				width: 100%;
+				background: url(images/guanli-1.png) 0 0 no-repeat;
+				height: 40px;
+				margin: 10px 0;
+				border-bottom: 1px solid #C0C0C0;
+			}
+			.td1{
+				background: url(images/hongme.png) center no-repeat;
+			}
+			.td2{
+				background: url(images/kongfang.png) center no-repeat;
+			}
+			.td3{
+				background: url(images/putong-1.png) center no-repeat;
+			}
+			.td4{
+				background:  url(images/zhuzhup1.png) center no-repeat;
+			}
+		</style>
+	</head>
+
+	<body style="font-size: 18px;">
+	<!--背景图片-->	
+		<div id="ds">
+			<img id="ims" src="images/ss11247.png" class="img-responsive"alt="Responsive image"/>
+		</div>
+		<!--inbut查询框-->
+		<div id="pos">
+			<div id="suos" class="input-group">
+					<div class="input-group-btn">
+						<button style="font-size: 18px;" id="but" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							            全部<span class="caret"></span>
+							        </button>
+						<ul style="font-size: 18px;"  class="dropdown-menu">
+							<li>
+								<a href="#">片区管理员</a>
+							</li>
+							<li>
+								<a href="#">楼长</a>
+							</li>
+							<li>
+								<a href="#">社区主任</a>
+							</li>
+						</ul>
+					</div>
+				<input id="ipus" placeholder="查询" type="text" class="form-control">
+				<span class="bus input-group-btn">
+			       <button id="buss" class="bus btn btn-default" type="button"></button>
+			    </span>
+			    
+			</div>
+			<!--查询下边的显示table-->
+			<table id="tab" class="table table-bordered">
+	            <tr id='tr' class="row text-danger">
+	                <th class="col-md-4 bg-primary text-center">地址</th>
+	                <th class="col-md-4 bg-primary text-center">片区名</th>
+	                <th class="col-md-4 bg-primary text-center">管理人</th>
+	            </tr>
+	            <tr id="tr1" class="row text-danger table-hover">
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	            </tr>
+	            <tr class="row text-danger table-hover">
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>	               
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>	               
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td  class="col-md-4 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	            </tr>
+			</table>
+		</div>
+		
+		<!--遮盖层-->
+		<div id="poss">
+			
+		</div>
+		
+		<!--弹出框警告框111-->
+		<div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header col">
+                    	<span style="font-size: 18px; color: #fff;">XXX网格XXX号楼XXX人员信息</span>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div id="tiaoli">
+                    		
+                    </div>
+                    <div style="overflow: hidden;">
+                    	 <!--******************************房屋住户***********-->
+                    <table id="tab0" class="table table-bordered">
+				            <tr id='tr' class="row text-danger">
+				                <th colspan="4" class="bg-primary text-center">地址</th>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F5</td>
+				                <td  class="col-md-5 td1 text-center" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F4</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F3</td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F2</td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td4 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F1</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+					</table>
+					 <!--******************************房屋住户***********-->
+					 <table id="tab1" class="table table-bordered">
+				            <tr id='tr' class="row text-danger">
+				                <th colspan="4" class="bg-primary text-center">地址</th>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F5</td>
+				                <td  class="col-md-5 td1 text-center" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F4</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F3</td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F2</td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td4 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F1</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+					</table>
+					 <table id="tab2" class="table table-bordered">
+				            <tr id='tr' class="row text-danger">
+				                <th colspan="4" class="bg-primary text-center">地址</th>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F5</td>
+				                <td  class="col-md-5 td1 text-center" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F4</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F3</td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F2</td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td4 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F1</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+					</table>
+					 <table id="tab4" class="table table-bordered">
+				            <tr id='tr' class="row text-danger">
+				                <th colspan="4" class="bg-primary text-center">地址</th>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F5</td>
+				                <td  class="col-md-5 td1 text-center" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F4</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F3</td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F2</td>
+				                <td  class="col-md-5 td2 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td4 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+				            <tr class="row text-danger table-hover">
+				                <td  class="col-md-2 text-center btn-sm">F1</td>
+				                <td  class="col-md-5 td3 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				                <td  class="col-md-5 td1 text-center btn-sm" data-toggle="modal" data-target="#layers"></td>
+				            </tr>
+					</table>
+                    </div>
+                   
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" @click='del(newIndex)'>确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+           <!--模态框 弹出框2222-->
+        <div role="dialog" class="modal fade bs-example-modal-sm" id="layers">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+			            <table class="table table-bordered">
+			            	<caption class="h3 text-info text-center">住户</caption>
+				            <tr id="row" class="row text-danger">
+				                <th id="th" class="col-md-2 bg-primary text-center">姓名</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">户主或与户主关系</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">出生地</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">民族</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">籍贯</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">出生日期</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">身份证号</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">政治面貌</th>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">户主</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">1987.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				               
+				            </tr>
+				             <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">妻子</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">1989.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">儿子</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">2015.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				            </tr>
+				        </table>
+                    </div>
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" @click='del(newIndex)'>确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+	<script>
+	window.onload=window.onresize=function (){
+		var total = document.documentElement.clientHeight;
+		var ds=document.getElementById("ds");
+		var ims=document.getElementById("ims");
+		ds.style.height=total+'px';
+		ims.style.height=total+'px';
+		
+	}
+	var ps=document.getElementById("poss");
+		var td=document.getElementById("tab").getElementsByTagName('td');
+		ps.onmouseover=function (){
+			ps.style.opacity=0.8;
+			td[0].innerHTML='博物馆';
+			td[1].innerHTML='国家所有';
+			td[2].innerHTML='习大大';
+		}
+		ps.onmouseout=function (){
+			ps.style.opacity=0;
+			td[0].innerHTML='';
+			td[1].innerHTML='';
+			td[2].innerHTML='';
+		}
+	
+	</script>
+</html>

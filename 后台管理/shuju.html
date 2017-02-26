@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin:0 ;padding: 0;}
+			#hs{
+				width: 1200px;
+				overflow: hidden;
+				margin: 80px auto 0;
+			}
+			h1{
+				font-weight: normal;
+				
+			}
+			span{
+				float: left;
+				width: 198px;
+				/*height: 50px;*/
+				text-align: center;
+				line-height: 60px;
+				/*padding: 25px 0;*/
+				border: 1px solid #FFFFFF;
+				cursor: pointer;
+				background: #6fb3e0;
+			}
+			#uls{
+				width:1200px;
+				margin: 0 auto;
+			}
+			#uls li{
+				width: 1198px;
+				height: 400px;
+				border: 1px solid #FFFFFF;
+				display: none;
+			}
+			
+			.ss{
+				background:#1e5e9c;
+			}
+			#uls .lis{
+				display: block;
+			}
+			#uls li div {
+				margin: 0 auto;
+			}
+		</style>
+		<script src="js/echarts (2).js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>
+			<h1 id="hs">
+				<span class="ss">人口区域分布</span>
+				<span>文化程度</span>
+				<span>年龄分布</span>
+				<span>政治面貌</span>
+				<span>婚姻状况</span>
+				<span>民族</span>
+			</h1>
+		</div>
+		
+		<ul id="uls">
+			<li class="lis">
+				 <div id="main" style="width: 600px;height:400px;"></div>
+				  <script type="text/javascript">
+			        // 基于准备好的dom，初始化echarts实例
+			        var myChart = echarts.init(document.getElementById('main'));
+			
+			        // 指定图表的配置项和数据
+			        var option = {
+			            title: {
+			                text: '人口分布'
+			            },
+			            tooltip: {},
+			            legend: {
+			                data:['人口分布图']
+			            },
+			            xAxis: {
+			                data: ["哈密","石河子","乌鲁木齐","天山","吐鲁番","昌吉","库尔勒"]
+			            },
+			            yAxis: {},
+			            series: [{
+			                name: '人口分布图',
+			                type: 'bar',
+			                data: [5, 20, 36, 10, 10, 20,30]
+			            }]
+			        };
+			
+			        // 使用刚指定的配置项和数据显示图表。
+			        myChart.setOption(option);
+			</script>			
+			</li>
+			<li>
+				 <div id="main1" style="width: 600px;height:400px;"></div>
+				 <script type="text/javascript">
+				 var myChart = echarts.init(document.getElementById('main1'));
+				 	var option = {
+					    series : [
+					        {
+					            name: '访问来源',
+					            type: 'pie',
+					            radius: '55%',
+					            data:[
+					                {value:235, name:'视频广告'},
+					                {value:274, name:'联盟广告'},
+					                {value:310, name:'邮件营销'},
+					                {value:335, name:'直接访问'},
+					                {value:400, name:'搜索引擎'}
+					            ]
+					        }
+					    ]
+					};
+				myChart.setOption(option);
+				 </script>
+			</li>
+			<li>
+				<div id="main3" style="width: 600px;height:400px;"></div>
+				  <script type="text/javascript">
+				        // 基于准备好的dom，初始化echarts实例
+				        var myChart = echarts.init(document.getElementById('main3'));
+				
+				        // 指定图表的配置项和数据
+				        var option = {
+				            title: {
+				                text: '人口分布'
+				            },
+				            tooltip: {},
+				            legend: {
+				                data:['人口分布图']
+				            },
+				            xAxis: {
+				                data: ["哈密","石河子","乌鲁木齐","天山","吐鲁番","昌吉","库尔勒"]
+				            },
+				            yAxis: {},
+				            series: [{
+				                name: '人口分布图',
+				                type: 'bar',
+				                data: [5, 20, 36, 10, 10, 20,30]
+				            }]
+				        };
+				
+				        // 使用刚指定的配置项和数据显示图表。
+				        myChart.setOption(option);
+				</script>			
+			</li>
+			<li>
+				 <div id="main4" style="width: 600px;height:400px;"></div>
+				 <script type="text/javascript">
+				 var myChart = echarts.init(document.getElementById('main4'));
+				 	var option = {
+					    series : [
+					        {
+					            name: '访问来源',
+					            type: 'pie',
+					            radius: '55%',
+					            data:[
+					                {value:235, name:'视频广告'},
+					                {value:274, name:'联盟广告'},
+					                {value:310, name:'邮件营销'},
+					                {value:335, name:'直接访问'},
+					                {value:400, name:'搜索引擎'}
+					            ]
+					        }
+					    ]
+					};
+				myChart.setOption(option);
+				 </script>
+			</li>
+			<li>
+				 <div id="main5" style="width: 600px;height:400px;"></div>
+				 <script type="text/javascript">
+				 var myChart = echarts.init(document.getElementById('main5'));
+				 	var option = {
+					    series : [
+					        {
+					            name: '访问来源',
+					            type: 'pie',
+					            radius: '55%',
+					            data:[
+					                {value:235, name:'视频广告'},
+					                {value:274, name:'联盟广告'},
+					                {value:310, name:'邮件营销'},
+					                {value:335, name:'直接访问'},
+					                {value:400, name:'搜索引擎'}
+					            ]
+					        }
+					    ]
+					};
+				myChart.setOption(option);
+				 </script>
+			</li>
+			<li>
+				 <div id="main6" style="width: 600px;height:400px;"></div>
+				 <script type="text/javascript">
+				 var myChart = echarts.init(document.getElementById('main6'));
+				 	var option = {
+					    series : [
+					        {
+					            name: '访问来源',
+					            type: 'pie',
+					            radius: '55%',
+					            data:[
+					                {value:235, name:'视频广告'},
+					                {value:274, name:'联盟广告'},
+					                {value:310, name:'邮件营销'},
+					                {value:335, name:'直接访问'},
+					                {value:400, name:'搜索引擎'}
+					            ]
+					        }
+					    ]
+					};
+				myChart.setOption(option);
+				 </script>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var hs=document.getElementById("hs");
+		var spa=hs.getElementsByTagName('span');
+		var uls=document.getElementById("uls");
+		var lis=uls.getElementsByTagName('li');
+		for (var i = 0; i < spa.length; i++) {
+			spa[i].onclick=function (){//给每一个span添加上点击事件
+//				alert(spa.length);
+				for (var j = 0; j <lis.length; j++) {
+					if(spa[j]==this){//确定我点的哪一个
+						spa[j].className='ss';
+						lis[j].className='lis';
+					}else{
+						spa[j].className='';
+						lis[j].className='';
+					}
+				}
+			}
+		}
+		
+	</script>
+</html>

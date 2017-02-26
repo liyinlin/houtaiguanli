@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			.table {
+				font-size: 18px;
+			
+			}
+			.table .bg-primary{
+				background: #6fb3e0;
+				color: #fff;
+			}
+			.table .text-info{
+				font-size: 34px;
+			}
+			#tab th,#tab td{
+				padding:20px 0;
+			}
+			#td button {
+				margin-left: 30px;
+			}
+			#row th{
+				font-size: 18px;
+				color: #000000;
+				font-family: "微软雅黑";
+				
+				background: #6fb3e0;
+			}
+			th{
+				font-weight:normal
+			}
+			#mar{
+				margin: 0 0;
+			}
+			#ipus{
+				width: 20%;
+				height: 43px;
+			}
+			#but,.bus{
+				height: 43px;
+			}
+			.bus{
+				float: left;
+			}
+			#buss{
+				width: 60px;
+				background:#1e5e9c url(images/sosuo.png) center no-repeat;
+			}
+			#suos{
+				width: 100%;
+				padding: 10px;
+				line-height: 43px;
+			}
+			.ri{
+				font-size: 18px;
+				overflow: hidden;
+				float: right;
+			}
+			.ri i{width: 18px;
+				height: 18px;
+				display: block;
+				border-radius: 20%;
+				background:#6ec3fe;
+				float: left;
+				margin-top: 13px;
+				margin-left: 50px;
+			}
+			.ri span {
+					float: left;
+			}
+			.ri .ye{
+				background: #b1fe43;
+			}
+			.ri .bl{
+				background: #feea40;
+			}
+			.ri .re{
+				background: #ff5e5d;
+			}
+		</style>
+		<script src="lib/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div>
+			<div id="suos" class="input-group">
+				<input id="ipus" placeholder="查询" type="text" class="form-control">
+				<span class="bus input-group-btn">
+			       <button id="buss" class="bus btn btn-default" type="button"></button>
+			   </span>
+			   <div class="ri">
+					<i></i><span>老年人</span>
+					<i class="is ye"></i><span>党员</span>
+					<i class="is bl"></i><span>社区矫正</span>
+					<i class="is re"></i><span>重点关注人群</span>
+				</div>
+			</div>
+			
+		</div>
+		<div>
+			  <table id="tab" class="table table-bordered">
+			  	<caption class="h3 text-info text-center">人口信息表</caption>
+				            <tr id="row" class="row text-danger">
+				                <th class="col-md-2 bg-primary text-center">姓名</th>
+				                <th  class="col-md-2 bg-primary text-center">住址</th>
+				                <th  class="col-md-1 bg-primary text-center">出生地</th>
+				                <th  class="col-md-1 bg-primary text-center">民族</th>
+				                <th  class="col-md-2 bg-primary text-center">籍贯</th>
+				                <th  class="col-md-1 bg-primary text-center">出生日期</th>
+				                <th  class="col-md-2 bg-primary text-center">身份证号</th>
+				                <th  class="col-md-1 bg-primary text-center">政治面貌</th>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td  class="text-center">XXX</td>
+				                <td  class="text-center">乌鲁木齐</td>
+				                <td  class="text-center">阿拉善</td>
+				                <td  class="text-center">哈萨克</td>
+				              	<td  class="text-center">阿拉善左旗</td>				       
+				              	<td  class="text-center">1987.3.6</td>
+				              	<td  class="text-center">11111111111111111</td>
+				                <td  class="text-center">无</td>
+				            </tr>
+				           	 <tr class="row text-danger">
+				                <td  class="text-center">XXX</td>
+				                <td  class="text-center">乌鲁木齐</td>
+				                <td  class="text-center">阿拉善</td>
+				                <td  class="text-center">哈萨克</td>
+				              	<td  class="text-center">阿拉善左旗</td>				       
+				              	<td  class="text-center">1987.3.6</td>
+				              	<td  class="text-center">11111111111111111</td>
+				                <td  class="text-center">无</td>
+				            </tr>
+				             <tr class="row text-danger">
+				                <td  class="text-center">XXX</td>
+				                <td  class="text-center">乌鲁木齐</td>
+				                <td  class="text-center">阿拉善</td>
+				                <td  class="text-center">哈萨克</td>
+				              	<td  class="text-center">阿拉善左旗</td>				       
+				              	<td  class="text-center">1987.3.6</td>
+				              	<td  class="text-center">11111111111111111</td>
+				                <td  class="text-center">无</td>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td  class="text-center">XXX</td>
+				                <td  class="text-center">乌鲁木齐</td>
+				                <td  class="text-center">阿拉善</td>
+				                <td  class="text-center">哈萨克</td>
+				              	<td  class="text-center">阿拉善左旗</td>				       
+				              	<td  class="text-center">1987.3.6</td>
+				              	<td  class="text-center">11111111111111111</td>
+				                <td  class="text-center">无</td>
+				            </tr>
+				        </table>
+			<p style="font-size: 20px;padding-right:30px;float: right;">共<span style="color: #54aad9;">4</span>条记录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/5页</p>
+		</div>
+		    <!--模态框 弹出框-->
+        <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+			           
+                    </div>
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" @click='del(newIndex)'>确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

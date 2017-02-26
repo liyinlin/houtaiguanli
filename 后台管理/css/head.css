@@ -1,0 +1,27 @@
+#head{
+	padding: 20px 30px;
+	background:#1e5e9c;
+	overflow: hidden;
+}
+#head .guanli{
+	float: left;
+	font-size: 32px;
+	font-family: '黑体';
+}
+#xixi{
+	float: right;
+	overflow: hidden;
+	font-size: 18px;
+}
+#xixi li{
+	float: left;
+	margin-left: 25px;
+	line-height: 32px;
+}
+#xixi li span {
+	color: #fff;
+}
+#zhanshi{
+	
+}
+

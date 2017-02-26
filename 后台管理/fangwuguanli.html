@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			.table {
+				font-size: 18px;
+			
+			}
+			.table .bg-primary{
+				background: #6fb3e0;
+				color: #fff;
+			}
+			.table .text-info{
+				font-size: 34px;
+			}
+			.table #th{
+				padding:20px 0;
+			}
+			#td button {
+				margin-left: 30px;
+			}
+			#row #th{
+				font-size: 15px;
+				color: #000000;
+				font-family: "微软雅黑";
+				padding: 5px 0;
+				background: #fff;
+			}
+			th{
+				font-weight:normal
+			}
+			#mar{
+				margin: 0 0;
+			}
+		</style>
+		<script src="lib/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		</div>
+		<div>
+			<table class="table table-bordered">
+				<caption id="mar" class="h3 text-info text-center">房屋信息表</caption>
+	            <tr class="row text-danger">
+	                <th id="th" class="col-md-3 bg-primary text-center">地址</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">房屋信息</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">产权信息</th>
+	                <th id="th" class="col-md-3 bg-primary text-center">租住</th>
+	               
+	            </tr>
+	            <tr class="row text-danger table-hover">
+	                <td id="th" class="col-md-3 text-center btn-sm" data-toggle="modal" data-target="#layer"></td>
+	                <td id="th" class="col-md-3 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td id="th" class="col-md-3 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	                <td id="th" class="col-md-3 text-center btn-sm" data-toggle="modal" data-target="#layer""></td>
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	            </tr>
+	             <tr class="row text-danger table-hover">
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	                <td id="th" class="col-md-3 text-center"></td>
+	            </tr>
+			</table>
+			<p style="font-size: 20px;padding-right:30px;float: right;">共<span style="color: #54aad9;">4</span>条记录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/5页</p>
+		</div>
+		    <!--模态框 弹出框-->
+        <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+			            <table class="table table-bordered">
+			            	<caption class="h3 text-info">住户</caption>
+				            <tr id="row" class="row text-danger">
+				                <th id="th" class="col-md-2 bg-primary text-center">姓名</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">户主或与户主关系</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">出生地</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">民族</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">籍贯</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">出生日期</th>
+				                <th id="th" class="col-md-2 bg-primary text-center">身份证号</th>
+				                <th id="th" class="col-md-1 bg-primary text-center">政治面貌</th>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">户主</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">1987.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				               
+				            </tr>
+				             <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">妻子</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">1989.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				            </tr>
+				            <tr class="row text-danger">
+				                <td id="th" class="text-center">XXX</td>
+				                <td id="th" class="text-center">儿子</td>
+				                <td id="th" class="text-center">阿拉善</td>
+				                <td id="th" class="text-center">阿拉善左旗</td>
+				              	<td id="th" class="text-center">哈萨克</td>
+				              	<td id="th" class="text-center">乌鲁木齐</td>
+				              	<td id="th" class="text-center">2015.3.6</td>
+				                <td id="th" class="text-center">无</td>
+				            </tr>
+				        </table>
+                    </div>
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" @click='del(newIndex)'>确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
